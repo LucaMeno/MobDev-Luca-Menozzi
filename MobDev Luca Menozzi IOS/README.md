@@ -1,6 +1,6 @@
 Luca Menozzi 317730
 
-Progetto Android: Memorandum
+Progetto IOS: Memorandum
 
 FUNZIONAMENTO APPLICAZIONE IN BREVE:
 
