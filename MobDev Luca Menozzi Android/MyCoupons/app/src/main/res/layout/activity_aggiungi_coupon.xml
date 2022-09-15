@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AggiungiCoupon">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- NOME AZIENDA -->
+            <TableRow android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".30"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/azienda"
+                    android:textSize="16sp" />
+
+
+                <EditText
+                    android:id="@+id/txt_nomeAzienda"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".70"
+                    android:hint="@string/azienda_default"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+
+            <!-- CODICE -->
+            <TableRow android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".30"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/codice"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txt_codice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".70"
+                    android:hint="@string/codice_default"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <!-- SWITCH SCADENZA -->
+            <TableRow android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/scadenza"
+                    android:textSize="16sp" />
+
+                <Switch android:id="@+id/switch_scadenza" />
+
+            </TableRow>
+
+            <!-- SCADENZA -->
+            <TableRow
+                android:id="@+id/row_scadenza"
+                android:gravity="center">
+
+                <DatePicker
+                    android:id="@+id/data_scadenza"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <!-- TIPO CODICE -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".30"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/formato_codice"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <!-- RADIO TIPO CODICE -->
+            <TableRow
+                android:layout_marginBottom="16dp"
+                android:gravity="center">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_qr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/qr_code" />
+
+                    <RadioButton
+                        android:id="@+id/radio_bar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/bar_code" />
+                </RadioGroup>
+
+            </TableRow>
+
+            <!-- POSIZIONE -->
+            <TableRow
+                android:layout_marginBottom="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".30"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/posizioni"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".70"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_aggiungiPosizioni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="0dp"
+                        android:padding="4dp"
+                        app:icon="@android:drawable/ic_dialog_map"
+                        app:iconPadding="0dp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <!-- BTN INSERISCI -->
+            <TableRow
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_inserisci"
+                    android:text="@string/inserisci" />
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- BTN SCANSIONA CODICE -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_addCouponFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/btn_addCouponFoto_desc"
+        android:src="@android:drawable/ic_menu_camera"
+        app:fabSize="normal" />
+
+</RelativeLayout>

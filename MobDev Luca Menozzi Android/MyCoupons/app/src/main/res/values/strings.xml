@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MyCoupons</string>
+    <string name="col1">Coupons Disponibili</string>
+    <string name="fab_content_desc">Aggiungi</string>
+    <string name="title_activity_item_detail_host">ItemDetailHostActivity</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="title_activity_mappa_coupon">MappaCoupon</string>
+    <string name="azienda">Azienda:</string>
+    <string name="codice">Codice:</string>
+    <string name="scadenza">Scadenza:</string>
+    <string name="formato_codice">Formato codice:</string>
+    <string name="qr_code">QR code</string>
+    <string name="bar_code">BAR code</string>
+    <string name="posizioni">Posizioni:</string>
+    <string name="inserisci">Inserisci</string>
+    <string name="codice_scansionabile">Codice scansionabile:</string>
+    <string name="modifica">Modifica</string>
+    <string name="codice_default">ABCDEF</string>
+    <string name="azienda_default">Azienda</string>
+    <string name="btn_addCouponFoto_desc">btn per aggiungere un coupon da qr/bar code</string>
+    <string name="btn_eliminaPos_desc">btn per eliminare marker</string>
+    <string name="btn_modificaCoupon_desc">btn per modificare un coupon</string>
+    <string name="btn_eliminaCoupon_desc">btn per eliminare il coupon</string>
+</resources>
+

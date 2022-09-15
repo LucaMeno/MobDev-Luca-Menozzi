@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModificaCoupon">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- NOME AZIENDA -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".30"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/azienda"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/txt_nomeAzienda_modifica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".70"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="16sp" />
+
+        </TableRow>
+
+
+        <!-- CODICE -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".30"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/codice"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txt_codice_modifica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".70"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="16sp" />
+        </TableRow>
+
+        <!-- SWITCH SCADENZA -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:fontFamily="sans-serif-black"
+                android:text="@string/scadenza"
+                android:textSize="16sp" />
+
+            <Switch android:id="@+id/switch_scadenza_modifica" />
+
+        </TableRow>
+
+        <!-- SCADENZA -->
+        <TableRow
+            android:id="@+id/row_scadenza"
+            android:gravity="center">
+
+            <DatePicker
+                android:id="@+id/data_scadenza_modifica"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <!-- TIPO CODICE -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".30"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/formato_codice"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <!-- RADIO TIPO CODICE -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:gravity="center">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_qr_modifica"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:text="@string/qr_code" />
+
+                <RadioButton
+                    android:id="@+id/radio_bar_modifica"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:text="@string/bar_code" />
+            </RadioGroup>
+
+        </TableRow>
+
+        <!-- POSIZIONE -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".30"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/posizioni"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".70"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_modificaPosizioni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:padding="4dp"
+                    app:icon="@android:drawable/ic_dialog_map"
+                    app:iconPadding="0dp" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <!-- BTN MODIFICA -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_modificaCoupon"
+                android:text="@string/modifica" />
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
